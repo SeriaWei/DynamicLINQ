@@ -19,7 +19,8 @@ namespace DynamicLINQ
                new B(){A="C"}
             };
 
-            var resu = values.AsQueryable().Where("A.Contains(@0)", "Al");
+            var resu = values.AsQueryable().Where("A.Contains(\"Al\")");
+            var resuC = values.AsQueryable().Where("A.Contains(@0)","C");
 
         }
     }
